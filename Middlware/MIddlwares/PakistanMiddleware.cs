@@ -17,7 +17,7 @@ namespace Middlware.MIddlwares
         public async Task Invoke(HttpContext httpContext)
         {
             httpContext.Response.ContentType = "text/html";
-            await httpContext.Response.WriteAsync("Start Middleware");
+            await httpContext.Response.WriteAsync("asdfasdfasd Middleware");
             await _next(httpContext);
             await httpContext.Response.WriteAsync("end Middleware");
         }
