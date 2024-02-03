@@ -40,11 +40,23 @@ var app = builder.Build();
 #endregion
 
 
-
 //______ 3. (Code Managing) Custom Class Middlware  ______
 #region 
+////Custom Middwlare
+//app.UseMiddleware<MyCustomMiddlware>();
+
+////2nd middwlare
+//app.Run(async (HttpContext context) =>
+//{
+//    await context.Response.WriteAsync("<br> My 3rd Middlware <br>");
+//});
+#endregion
+
+//______ 4. Extension Method + Middlware ______
+#region MyRegion
 //Custom Middwlare
-app.UseMiddleware<MyCustomMiddlware>();
+//app.UseMiddleware<MyCustomMiddlware>();
+app.DoSomethingLikeUse();
 
 //2nd middwlare
 app.Run(async (HttpContext context) =>
@@ -52,6 +64,5 @@ app.Run(async (HttpContext context) =>
     await context.Response.WriteAsync("<br> My 3rd Middlware <br>");
 });
 #endregion
-
 
 app.Run();
