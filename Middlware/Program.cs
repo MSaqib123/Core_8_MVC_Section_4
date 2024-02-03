@@ -53,11 +53,26 @@ var app = builder.Build();
 #endregion
 
 //______ 4. Extension Method + Middlware ______
-#region MyRegion
+#region ExtensionMethod
 //Custom Middwlare
 //app.UseMiddleware<MyCustomMiddlware>();
 
 app.DoSomethingLikeUse(); //ha na kaamaaal
+
+//2nd middwlare
+app.Run(async (HttpContext context) =>
+{
+    await context.Response.WriteAsync("<br> My 3rd Middlware <br>");
+});
+#endregion
+
+//______ 5. VS Template to create Middleware ______
+#region ExtensionMethod
+//Custom Middwlare
+//app.UseMiddleware<MyCustomMiddlware>();
+
+app.DoSomethingLikeUse(); //1st way
+app.UsePakistanMiddleware(); //2nd way
 
 //2nd middwlare
 app.Run(async (HttpContext context) =>
