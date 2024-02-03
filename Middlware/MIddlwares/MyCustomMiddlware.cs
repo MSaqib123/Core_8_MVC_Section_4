@@ -1,5 +1,6 @@
 ﻿namespace Middlware.MIddlwares
 {
+    //__________ 1st Way to create Middlware ____________
     public class MyCustomMiddlware : IMiddleware
     {
         public async Task InvokeAsync(HttpContext context, RequestDelegate next)
@@ -10,6 +11,9 @@
             await context.Response.WriteAsync("end Middleware");
         }
     }
+
+    //__________ 2nd way to create middlware ____________
+    //without Inhariting IMiddlware interface 
 
     public static class CustomMiddlewareExtension
     {

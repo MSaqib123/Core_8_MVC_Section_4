@@ -56,7 +56,8 @@ var app = builder.Build();
 #region MyRegion
 //Custom Middwlare
 //app.UseMiddleware<MyCustomMiddlware>();
-app.DoSomethingLikeUse();
+
+app.DoSomethingLikeUse(); //ha na kaamaaal
 
 //2nd middwlare
 app.Run(async (HttpContext context) =>
