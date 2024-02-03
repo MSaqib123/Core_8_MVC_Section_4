@@ -41,5 +41,17 @@ var app = builder.Build();
 
 
 
+//______ 3. (Code Managing) Custom Class Middlware  ______
+#region 
+//Custom Middwlare
+app.UseMiddleware<MyCustomMiddlware>();
+
+//2nd middwlare
+app.Run(async (HttpContext context) =>
+{
+    await context.Response.WriteAsync("<br> My 3rd Middlware <br>");
+});
+#endregion
+
 
 app.Run();
