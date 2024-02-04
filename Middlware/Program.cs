@@ -85,15 +85,21 @@ var app = builder.Build();
 //______ 6. RightOrders for Middlwares ______
 #region RightOrder
 //See the picture
-app.UseExceptionHandler("/Error");
-app.UseHsts();
-app.UseHttpsRedirection();
-app.UseStaticFiles();
-app.UseCors();
-app.UseAuthentication();
-app.UseAuthorization();
-app.UseSession();
-app.MapControllers();
+//app.UseExceptionHandler("/Error");
+//app.UseHsts();
+//app.UseHttpsRedirection();
+//app.UseStaticFiles();
+//app.UseCors();
+//app.UseAuthentication();
+//app.UseAuthorization();
+//app.UseSession();
+//app.MapControllers();
+#endregion
+
+//______ 7. UseWhen ______
+#region UseWhen 
+//i don't use    UseWhen
+//its used to run  branches of Middwlare
 #endregion
 
 app.Run();
