@@ -5,6 +5,8 @@ VisualStudioVersion = 17.6.33815.320
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Middlware", "Middlware\Middlware.csproj", "{D994135E-8215-4A3D-ABD7-AF6FA9A9F9FD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Routing", "Routing\Routing.csproj", "{51EBAA88-D096-4BA5-8712-E5D8F335FCA4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{D994135E-8215-4A3D-ABD7-AF6FA9A9F9FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D994135E-8215-4A3D-ABD7-AF6FA9A9F9FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D994135E-8215-4A3D-ABD7-AF6FA9A9F9FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51EBAA88-D096-4BA5-8712-E5D8F335FCA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51EBAA88-D096-4BA5-8712-E5D8F335FCA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51EBAA88-D096-4BA5-8712-E5D8F335FCA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51EBAA88-D096-4BA5-8712-E5D8F335FCA4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
