@@ -71,14 +71,29 @@ var app = builder.Build();
 //Custom Middwlare
 //app.UseMiddleware<MyCustomMiddlware>();
 
-app.DoSomethingLikeUse(); //1st way
-app.UsePakistanMiddleware(); //2nd way
+//app.DoSomethingLikeUse(); //1st way
+//app.UsePakistanMiddleware(); //2nd way
 
-//2nd middwlare
-app.Run(async (HttpContext context) =>
-{
-    await context.Response.WriteAsync("<br> My 3rd Middlware <br>");
-});
+////2nd middwlare
+//app.Run(async (HttpContext context) =>
+//{
+//    await context.Response.WriteAsync("<br> My 3rd Middlware <br>");
+//});
+#endregion
+
+
+//______ 6. RightOrders for Middlwares ______
+#region RightOrder
+//See the picture
+app.UseExceptionHandler("/Error");
+app.UseHsts();
+app.UseHttpsRedirection();
+app.UseStaticFiles();
+app.UseCors();
+app.UseAuthentication();
+app.UseAuthorization();
+app.UseSession();
+app.MapControllers();
 #endregion
 
 app.Run();
