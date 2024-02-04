@@ -16,10 +16,10 @@ namespace Middlware.MIddlwares
 
         public async Task Invoke(HttpContext httpContext)
         {
-            httpContext.Response.ContentType = "text/html";
+            //httpContext.Response.ContentType = "text/html";
             await httpContext.Response.WriteAsync("asdfasdfasd Middleware");
-            await _next(httpContext);
             await httpContext.Response.WriteAsync("end Middleware");
+            await _next(httpContext);
         }
     }
 

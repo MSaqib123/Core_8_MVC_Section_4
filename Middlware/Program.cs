@@ -71,7 +71,7 @@ var app = builder.Build();
 //Custom Middwlare
 //app.UseMiddleware<MyCustomMiddlware>();
 
-//app.DoSomethingLikeUse(); //1st way
+app.DoSomethingLikeUse(); //1st way
 app.UsePakistanMiddleware(); //2nd way
 
 //2nd middwlare
